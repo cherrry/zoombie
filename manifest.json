@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Zoombie",
+  "description": "Automatically update zoom level based on monitor setup.",
+  "version": "0.0.0",
+  "permissions": [
+    "tabs",
+    "system.display",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
